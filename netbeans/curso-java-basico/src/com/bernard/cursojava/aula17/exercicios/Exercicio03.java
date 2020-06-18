@@ -15,22 +15,28 @@ public class Exercicio03 {
         boolean isSex = true;
         boolean isCivicState = true;
         
+        String name;
+        int age;
+        double salary;
+        String sex;
+        String civicState;
+        
         while (isCivicState || isAge || isName || isSalary || isSex) {            
             
             System.out.println("Esreva o seu nome: ");
-            String name = scan.next();
+            name = scan.next();
             
             System.out.println("Esreva a sua idade : ");
-            int age = scan.nextInt();
+            age = scan.nextInt();
             
             System.out.println("Esreva o seu salário: ");
-            double salary = scan.nextDouble();
+            salary = scan.nextDouble();
             
             System.out.println("Esreva o seu sexo ('m' ou 'f'): ");
-            String sex = scan.next();
+            sex = scan.next();
             
             System.out.println("Esreva o seu estado civil('s', 'c', 'v' ou 'd'): ");
-            String civicState = scan.next();
+            civicState = scan.next();
             
             if(name.length() > 3){
                 isName = false;

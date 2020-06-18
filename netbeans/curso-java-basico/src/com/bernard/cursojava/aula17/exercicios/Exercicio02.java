@@ -10,12 +10,15 @@ public class Exercicio02 {
         Scanner scan = new Scanner(System.in);
         
         boolean isEqual = true;
+        String usuario;
+        String senha;
+        
         while (isEqual) {            
             System.out.println("Escreva o seu nome de usuario: ");
-            String usuario = scan.next();
+            usuario = scan.next();
             
             System.out.println("Escreva sua senha: ");
-            String senha = scan.next();
+            senha = scan.next();
             
             if(!senha.equals(usuario)){
                 isEqual = false;

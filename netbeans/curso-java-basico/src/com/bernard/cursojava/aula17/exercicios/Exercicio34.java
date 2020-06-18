@@ -2,26 +2,24 @@ package com.bernard.cursojava.aula17.exercicios;
 
 import java.util.Scanner;
 
-public class Exercicio33 {
-    public static void main(String[] args) {
-        
-        Scanner scanner = new Scanner(System.in);
+public class Exercicio34 {
 
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Escreva o ultimo termo da sequencia: ");
         int n = scanner.nextInt();
 
-        double impar;
         double termo;
         double soma = 0;
         int div;
         String output = "Soma = ";
-        
-        for (int i = 1; i <= n; i++) {
-            impar = (2 * i) - 1;
-            div = (int)impar;
-            termo = i / impar;
+
+        for (double i = 1; i <= n; i++) {
+            div = (int)i;
+            termo = 1 / i;
             soma += termo;
-            output += i + "/" + div + " + " ;
+            output += 1 + "/" + div + " + " ;
         }
 
         System.out.println(output);

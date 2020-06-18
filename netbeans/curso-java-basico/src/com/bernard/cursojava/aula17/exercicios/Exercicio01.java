@@ -16,6 +16,7 @@ public class Exercicio01 {
             double nota = scan.nextDouble();
             if (nota >= 0 && nota <= 10) {
                 invalido = false;
+                System.out.println("Sua nota foi: " + nota);
             } else {
                 System.out.println("Nota inválida! tente novamente.");
             }

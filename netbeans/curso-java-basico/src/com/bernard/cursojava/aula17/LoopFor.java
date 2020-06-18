@@ -34,7 +34,7 @@ public class LoopFor {
         long soma = 0;
         for (byte n = 1; n <= 5; soma += n++);
         System.out.println("A soma dos 5 primeiros números naturais: " + soma);
-
+        
 
     }
 }
