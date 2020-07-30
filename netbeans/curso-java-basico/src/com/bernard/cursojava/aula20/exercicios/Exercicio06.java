@@ -57,7 +57,7 @@ public class Exercicio06 {
                     } else if (coluna < 1 || coluna > 3) {
                         System.out.println("Coluna invalida! tente novamente");
                         numJogada--;
-                    } else if (!jogoDaVelha[linha - 1][coluna - 1].equals("-")){
+                    } else if (!jogoDaVelha[linha - 1][coluna - 1].equals("-")) {
                         System.out.println("Esta posição já está ocupada.");
                         numJogada--;
                     } else {
@@ -75,48 +75,48 @@ public class Exercicio06 {
                     // Regra do Jogo
                     for (int i = 0; i < jogoDaVelha.length; i++) {
                         if (jogoDaVelha[i][0].equals(jogoDaVelha[i][1]) && jogoDaVelha[i][0].equals(jogoDaVelha[i][2])) {
-                            if (!jogoDaVelha[i][0].equals("-")){
+                            if (!jogoDaVelha[i][0].equals("-")) {
                                 fimJogo = true;
-                                if (jogoDaVelha[i][0].equals("X")){
-                                    System.out.println("Fim do Jogo! o jogador 1 venceu! linha - " + (i+1));
+                                if (jogoDaVelha[i][0].equals("X")) {
+                                    System.out.println("Fim do Jogo! o jogador 1 venceu! linha - " + (i + 1));
                                 }
-                                if (jogoDaVelha[i][0].equals("O")){
-                                    System.out.println("Fim do Jogo! o jogador 2 venceu! linha - " + (i+1));
+                                if (jogoDaVelha[i][0].equals("O")) {
+                                    System.out.println("Fim do Jogo! o jogador 2 venceu! linha - " + (i + 1));
                                 }
                             }
                         }
                         if (jogoDaVelha[0][i].equals(jogoDaVelha[1][i]) && jogoDaVelha[0][i].equals(jogoDaVelha[2][i])) {
-                            if (!jogoDaVelha[0][i].equals("-")){
+                            if (!jogoDaVelha[0][i].equals("-")) {
                                 fimJogo = true;
-                                if (jogoDaVelha[0][i].equals("X")){
-                                    System.out.println("Fim do Jogo! o jogador 1 venceu! coluna - " + (i+1));
+                                if (jogoDaVelha[0][i].equals("X")) {
+                                    System.out.println("Fim do Jogo! o jogador 1 venceu! coluna - " + (i + 1));
                                 }
-                                if (jogoDaVelha[0][i].equals("O")){
-                                    System.out.println("Fim do Jogo! o jogador 2 venceu! coluna - " + (i+1));
+                                if (jogoDaVelha[0][i].equals("O")) {
+                                    System.out.println("Fim do Jogo! o jogador 2 venceu! coluna - " + (i + 1));
                                 }
                             }
                         }
 
                     }
 
-                    if (jogoDaVelha[0][0].equals(jogoDaVelha[1][1]) && jogoDaVelha[0][0].equals(jogoDaVelha[2][2])){
-                        if (!jogoDaVelha[1][1].equals("-")){
+                    if (jogoDaVelha[0][0].equals(jogoDaVelha[1][1]) && jogoDaVelha[0][0].equals(jogoDaVelha[2][2])) {
+                        if (!jogoDaVelha[1][1].equals("-")) {
                             fimJogo = true;
-                            if (jogoDaVelha[0][0].equals("X")){
+                            if (jogoDaVelha[0][0].equals("X")) {
                                 System.out.println("Fim do Jogo! o jogador 1 venceu!(diagonal principal)");
                             }
-                            if (jogoDaVelha[0][0].equals("O")){
+                            if (jogoDaVelha[0][0].equals("O")) {
                                 System.out.println("Fim do Jogo! o jogador 2 venceu!(diagonal principal)");
                             }
                         }
                     }
-                    if (jogoDaVelha[0][2].equals(jogoDaVelha[1][1]) && jogoDaVelha[2][0].equals(jogoDaVelha[1][1])){
-                        if (!jogoDaVelha[1][1].equals("-")){
+                    if (jogoDaVelha[0][2].equals(jogoDaVelha[1][1]) && jogoDaVelha[2][0].equals(jogoDaVelha[1][1])) {
+                        if (!jogoDaVelha[1][1].equals("-")) {
                             fimJogo = true;
-                            if (jogoDaVelha[0][0].equals("X")){
+                            if (jogoDaVelha[0][0].equals("X")) {
                                 System.out.println("Fim do Jogo! o jogador 1 venceu!(diagonal secundaria)");
                             }
-                            if (jogoDaVelha[0][0].equals("O")){
+                            if (jogoDaVelha[0][0].equals("O")) {
                                 System.out.println("Fim do Jogo! o jogador 2 venceu!(diagonal secundaria)");
                             }
                         }
@@ -124,7 +124,7 @@ public class Exercicio06 {
 
                     numJogada++;
                 }
-                if (numJogada == 9 && !fimJogo){
+                if (numJogada == 9 && !fimJogo) {
                     System.out.println("Deu Velha!");
                 }
             } else {
