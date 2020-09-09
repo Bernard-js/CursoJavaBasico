@@ -1,31 +1,34 @@
 package com.bernard.cursojava.aula43;
 
+import java.util.Arrays;
+import java.util.Objects;
+
 public class Aluno extends Pessoa {
-    private String[] cursos;
-    private String[][] notas;
+    private String curso;
+    private int[] notas;
 
     public Aluno(){
         super();
     }
 
-    public Aluno(String nome, String endereco, String telefone, String[] cursos){
+    public Aluno(String nome, String endereco, String telefone, String curso){
         super(nome, endereco, telefone);
-        this.cursos = cursos;
+        this.curso = curso;
     }
 
-    public String[] getCursos(){
-        return this.cursos;
+    public String getCurso(){
+        return this.curso;
     }
 
-    public void setCursos(String[] cursos) {
-        this.cursos = cursos;
+    public void setCurso(String curso) {
+        this.curso = curso;
     }
 
-    public String[][] getNotas() {
+    public int[] getNotas() {
         return notas;
     }
 
-    public void setNotas(String[][] notas) {
+    public void setNotas(int[] notas) {
         this.notas = notas;
     }
 
@@ -43,5 +46,35 @@ public class Aluno extends Pessoa {
         s += super.getEndereco();
 
         return s;
+    }
+
+    public void imprimirEtiqueta(){
+        System.out.println(this.obterEtiquetaEndereco());
+    }
+
+    @Override
+    public String toString() {
+        String s = curso + "\n";
+        for (int nota : notas) {
+            s += nota + " ";
+        }
+        return s;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Aluno aluno = (Aluno) o;
+        if (curso.equalsIgnoreCase(((Aluno) o).getCurso())) return true;
+
+        return false;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = Objects.hash(curso);
+        result = 31 * result + Arrays.hashCode(notas);
+        return result;
     }
 }
